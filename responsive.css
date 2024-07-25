@@ -1,0 +1,136 @@
+@media (max-width:600px) {
+    .body{
+        overflow-x: hidden;
+    }
+    .Loader {
+        position: relative;
+        height: 100vh; 
+        width: 100vw;
+        /* background-color: aqua; */
+    }
+
+    .loader-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 100vh;
+        width: 100vh;
+        transform: translate(-50%, -50%) rotate(90deg);
+        /* background-color: blue; */
+    }
+    
+    .Loader .img1{
+        height: 20vw;
+        position: absolute;
+        left: 25%;
+        top: 18%;
+        /* background-color: antiquewhite; */
+    }
+
+    .Loader .img2{
+        height: 20vw;
+        position: absolute;
+        left: 25%;
+        top:26%;
+        /* background-color: antiquewhite; */
+    }
+
+   
+      .line h1 {
+        font-size: 6vw;
+        position: absolute;
+        top: 66%;
+        right: 46%;
+        /* background-color: antiquewhite; */
+      }
+
+      #line1-part1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.4vw;
+        color: white;
+        position: absolute;
+        top: 71%;
+        right: 57%;
+        /* background-color: aqua; */
+      }
+      #line1-part1 h5,
+      #line1-part1 h6 {
+        font-size: 5vw;
+        font-family: font4;
+      }
+
+      /* __________________________________page1___________________________________________ */
+
+      .navbar .middle{
+        display: none;
+      }
+     
+      .navbar i {
+        font-size: 8vw;
+        margin-right: 3vw;
+        cursor: pointer;
+      }
+      #slide {
+        height: 100vh;
+        width: 40vw;
+        position: absolute;
+        background:linear-gradient(to right,  #ffffff38, #eea0a093);
+        z-index: 10;
+        top: 0;
+        display: none;
+        text-align: right;
+        backdrop-filter: blur(px);
+        padding: 150px 40px;
+      }
+      #slide h4 {
+        font-size: 2.6vw;
+        color: rgba(0, 0, 0, 0.881);
+        font-weight: 500;
+        margin-bottom: 3px;
+        padding-right: 5vh;
+      }
+      #slide i {
+        position: absolute;
+        top: 2.9vh;
+        right: 2.6vw;
+        font-size: 7vw;
+        border: 2px solid white;
+        background-color: rgb(255, 255, 255);
+        font-weight: 300;
+        border-radius: 50%;
+        padding: 0px 6px;
+        cursor: pointer;
+      }
+      .page1 {
+        flex-direction: column;
+        /* background-color: aqua; */
+      }
+
+      .page1 .img-bottom{
+        width: 100vw;
+        margin-right: 0;
+        padding-right: 0;
+        height: 55%;
+        
+      }
+
+      .upper .logo{
+        
+        top: 0px;
+        left: -80px;
+        height: 40vw;
+      }
+      .upper .texts{
+        /* background-color: red; */
+        top: 150px;
+        left: -230px ;
+        padding-right: 0;
+      }
+      .upper .texts h2{
+        font-size: 7.5vw;
+      }
+
+}
+

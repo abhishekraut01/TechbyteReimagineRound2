@@ -71,34 +71,37 @@ tl.from(".new",{
     opacity:0
 },"-=3")
 }
-function locomotiveanimation() {
-  gsap.registerPlugin(ScrollTrigger);
 
-  const locoScroll = new LocomotiveScroll({
-    el: document.querySelector("#main"),
-    smooth: true,
-  });
-  locoScroll.on("scroll", ScrollTrigger.update);
-  ScrollTrigger.scrollerProxy("#main", {
-    scrollTop(value) {
-      return arguments.length
-        ? locoScroll.scrollTo(value, 0, 0)
-        : locoScroll.scroll.instance.scroll.y;
-    },
-    getBoundingClientRect() {
-      return {
-        top: 0,
-        left: 0,
-        width: window.innerWidth,
-        height: window.innerHeight,
-      };
-    },
-    pinType: document.querySelector("#main").style.transform
-      ? "transform"
-      : "fixed",
-  });
-  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-  ScrollTrigger.refresh();
+function locomotiveanimation() {
+    if (window.innerWidth > 768) {
+      gsap.registerPlugin(ScrollTrigger);
+
+    const locoScroll = new LocomotiveScroll({
+      el: document.querySelector("#main"),
+      smooth: true,
+    });
+    locoScroll.on("scroll", ScrollTrigger.update);
+    ScrollTrigger.scrollerProxy("#main", {
+      scrollTop(value) {
+        return arguments.length
+          ? locoScroll.scrollTo(value, 0, 0)
+          : locoScroll.scroll.instance.scroll.y;
+      },
+      getBoundingClientRect() {
+        return {
+          top: 0,
+          left: 0,
+          width: window.innerWidth,
+          height: window.innerHeight,
+        };
+      },
+      pinType: document.querySelector("#main").style.transform
+        ? "transform"
+        : "fixed",
+    });
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+    ScrollTrigger.refresh();
+    }
 }
 function menubar() {
 var menu=  document.querySelector(".navbar #menuIcon");
@@ -125,6 +128,9 @@ var close=  document.querySelector("#slide .close")
   close.addEventListener("click",function(){
       tl.reverse()
     })
+
+    Shery.makeMagnet("i", {});
+    Shery.makeMagnet("#slide h4", {});
 }
 function Snapdragonanimation() {
   var tl = gsap.timeline({
@@ -257,12 +263,12 @@ function page5animation() {
     },
   });
   gsap.to("#page5 #Contain", {
-    transform: "translateX(-100%)",
+    transform: "translateX(-57%)",
     scrollTrigger: {
       trigger: "#page5",
       scroller: "#main",
       // markers:true,
-      start: "top 111.9%",
+      start: "top 118.9%",
       end: "top 0%",
       scrub: 1,
       pin: true,
